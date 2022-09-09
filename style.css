@@ -60,6 +60,7 @@ a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-size: 14px;
 }
 
 .content {
@@ -85,7 +86,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-image: url(/img/hospital.jpg);
+    background-image: url(./img/hospital.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
