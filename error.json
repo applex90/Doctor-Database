@@ -1,0 +1,7 @@
+{
+    "timestamp":"2020-09-16T22:14:45.624+0000",
+    "status":500,
+    "error":"Internal Server Error",
+    "message":"No message available",
+    "path":"/api/doctor/1"
+}
