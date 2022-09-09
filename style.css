@@ -46,6 +46,7 @@ a:hover {
 
 .badge {
     padding: 8px;
+    height: 48px;
     border-radius: 4px;
     color: #01a3d4;
     background-color: white;
@@ -283,6 +284,10 @@ input:focus {
 
     .infos div {
         width: 100%;
+    }
+
+    .badge {
+        display: none;
     }
 
 }
