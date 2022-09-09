@@ -46,7 +46,7 @@
         "specialities": ["Zahnmedizin"],
         "img": "img/eberhard_olenberger.jpg",
         "street": "Lilienstr. 3",
-        "zipcode": "München",
+        "zipcode": "80336",
         "city": "München",
         "opening_hours": {
             "monday": "08:00 - 16:00",

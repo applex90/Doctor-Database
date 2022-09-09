@@ -121,6 +121,11 @@ a:hover {
     margin-bottom: 32px;
 }
 
+.form div {
+    width: 100%;
+    position: relative;
+}
+
 input[type=text] {
     width: 100%;
     height: 48px;
@@ -131,11 +136,63 @@ input[type=text] {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
 }
 
 input:focus {
     outline: none !important;
     border-color: rgb(1, 163, 212);
+}
+
+#datalist-field {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
+}
+
+#datalist-field div {
+    padding: 6px;
+}
+
+#datalist-location {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
+}
+
+.category {
+    background-color: lightgrey;
+    user-select: none;
+    border-bottom: 1px solid gray;
+    font-weight: 600;
+}
+
+.data-elements {
+    border-bottom: 1px solid gray;
+    user-select: none;
+    cursor: pointer;
+}
+
+.data-elements-none {
+    border-bottom: 1px solid gray;
+    opacity: 0.6;
+    user-select: none;
+}
+
+.data-elements:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+#datalist-location div {
+    padding: 6px;
 }
 
 .infos {
@@ -171,6 +228,15 @@ input:focus {
     padding: 6px;
     box-shadow: 0 1px 2px 0px rgb(0 0 0 / 60%);
     display: none;
+}
+
+.close-btn {
+    text-align: center;
+}
+
+.close-btn span {
+    font-size: 32px;
+    cursor: pointer;
 }
 
 .footer {

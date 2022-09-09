@@ -46,9 +46,23 @@
                 <div>Termin online buchen.</div>
             </div>
             <div class="search-box">
-                <form onsubmit="searchDoctor()" class="form">
-                    <input type="text" placeholder="Fachgebiet, Erkrankung, Name" id="field" required>
-                    <input type="text" placeholder="Ort, PLZ, Stadt, Straße" id="location" required>
+                <form onsubmit="searchDoctor(); return false" class="form" autocomplete="off">
+                    <div>
+                        <input onkeyup="filterNameAndSpecialities()" onblur="toggleDatalists('none','none')" onfocus="toggleDatalists('block','none')" type="text"
+                            placeholder="Fachgebiet, Erkrankung, Name" id="field" required>
+                        <div id="datalist-field">
+
+                        </div>
+                    </div>
+
+                    <div>
+                    <input onkeyup="filterLocation()" onblur="toggleDatalists('none','none')" onfocus="toggleDatalists('none','block')" type="text" placeholder="Ort, PLZ, Stadt, Straße" id="location"
+                        required>
+
+                    <div id="datalist-location">
+
+                    </div>
+                    </div>
                     <button type="submit">
                         <span class="material-symbols-outlined">
                             search
@@ -57,20 +71,25 @@
                 </form>
             </div>
             <div id="resultwrapper">
+                <div class="close-btn"><span class="material-symbols-outlined"
+                        onclick="hideResultWrapper()">cancel</span></div>
                 <div id="results">
 
                 </div>
             </div>
             <div class="infos">
                 <div>
+                    <span class="material-symbols-outlined">comment</span>
                     <span>2 Mio.</span>
                     Patienten­bewertungen
                 </div>
                 <div>
+                    <span class="material-symbols-outlined">calendar_month</span>
                     <span>1 Mio.</span>
                     buchbare Termine
                 </div>
                 <div>
+                    <span class="material-symbols-outlined">location_on</span>
                     <span>5</span>
                     gelistete Ärzte
                 </div>
