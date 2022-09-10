@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
+    background-color: #d6dbeb;
 }
 
 * {
@@ -89,8 +90,7 @@ a:hover {
     flex-direction: column;
     justify-content: space-evenly;
     background-image: url(./img/hospital.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
     background-repeat: no-repeat;
     min-height: 100vh;
     padding: 16px;
@@ -215,6 +215,17 @@ input:focus {
     font-weight: 800;
 }
 
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.expand-panel {
+    text-align: center;
+    cursor: pointer;
+}
+
 #resultwrapper {
     margin: 16px 0;
     background-color: white;
@@ -222,8 +233,9 @@ input:focus {
     padding: 6px;
     opacity: 0;
     height: 0;
+    overflow: hidden;
     box-shadow: 0 1px 2px 0px rgb(0 0 0 / 60%);
-    transition: all 75ms ease-in-out;
+    transition: height 0.2ms ease-in-out;
 }
 
 #resultwrapper.show {
@@ -257,6 +269,11 @@ input:focus {
     gap: 16px;
     padding: 16px;
     box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
+    transition: all 125ms ease-in-out;
+}
+
+.result-item:hover {
+    box-shadow: 0 0 4px 0px rgb(0 0 0 / 60%);
 }
 
 .result-item .material-symbols-outlined {
