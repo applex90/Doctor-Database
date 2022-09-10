@@ -388,7 +388,6 @@ function searchDoctor() {
     let splitStringAsArray2 = searchString2.split(' ').filter(e => e != '');
 
     checkDoctors(splitStringAsArray1, splitStringAsArray2);
-    console.log(results);
     if (results.length > 0) {
         showResultWrapper();
         showResult('results');
