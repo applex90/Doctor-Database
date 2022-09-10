@@ -48,20 +48,22 @@
             <div class="search-box">
                 <form onsubmit="searchDoctor(); return false" class="form" autocomplete="off">
                     <div>
-                        <input onkeyup="filterNameAndSpecialities()" onblur="toggleDatalists('none','none')" onfocus="toggleDatalists('block','none')" type="text"
-                            placeholder="Fachgebiet, Erkrankung, Name" id="field" required>
+                        <input onkeyup="filterNameAndSpecialities()" onblur="toggleDatalists('none','none')"
+                            onfocus="toggleDatalists('block','none')" type="text"
+                            placeholder="Fachgebiet, Erkrankung, Name" id="field" autofocus pattern="[A-zÀ-ž\s]+" required>
                         <div id="datalist-field">
 
                         </div>
                     </div>
 
                     <div>
-                    <input onkeyup="filterLocation()" onblur="toggleDatalists('none','none')" onfocus="toggleDatalists('none','block')" type="text" placeholder="Ort, PLZ, Stadt, Straße" id="location"
-                        required>
+                        <input onkeyup="filterLocation()" onblur="toggleDatalists('none','none')"
+                            onfocus="toggleDatalists('none','block')" type="text" placeholder="Ort, PLZ, Stadt, Straße"
+                            id="location" pattern="[A-z0-9À-ž\s]+" required>
 
-                    <div id="datalist-location">
+                        <div id="datalist-location">
 
-                    </div>
+                        </div>
                     </div>
                     <button type="submit">
                         <span class="material-symbols-outlined">
@@ -90,7 +92,7 @@
                 </div>
                 <div>
                     <span class="material-symbols-outlined">location_on</span>
-                    <span>5</span>
+                    <span>5000</span>
                     gelistete Ärzte
                 </div>
             </div>

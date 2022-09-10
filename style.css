@@ -11,6 +11,7 @@ body {
 
 * {
     box-sizing: border-box;
+    user-select: none;
 }
 
 a {
@@ -146,11 +147,12 @@ input:focus {
     border-color: rgb(1, 163, 212);
 }
 
-#datalist-field {
+#datalist-field, #datalist-location {
     position: absolute;
     left: 0;
     right: 0;
     z-index: 1;
+    font-size: 18px;
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
@@ -158,16 +160,6 @@ input:focus {
 
 #datalist-field div {
     padding: 6px;
-}
-
-#datalist-location {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
 }
 
 .category {
@@ -228,12 +220,102 @@ input:focus {
     background-color: white;
     border-radius: 8px;
     padding: 6px;
+    opacity: 0;
+    height: 0;
     box-shadow: 0 1px 2px 0px rgb(0 0 0 / 60%);
-    display: none;
+    transition: all 75ms ease-in-out;
+}
+
+#resultwrapper.show {
+    height: auto;
+    opacity: 1;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 12px;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+}
+
+.result-header div {
+    align-self: flex-start;
+    padding: 12px;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
+}
+
+.result-item .material-symbols-outlined {
+    color: rgb(1, 163, 212);
+}
+
+.result-item img {
+    height: 125px;
+    width: 125px;
+    object-fit: cover;
+    box-shadow: 0 0 2px 0px rgb(0 0 0 / 60%);
+}
+
+.result-item h2, h3, h4 {
+    margin-top: 0;
+}
+
+.result-item h2, h4 {
+    margin-bottom: 0;
+}
+
+.result-item h3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+}
+
+table tr{
+    background-color: rgb(250, 250, 250);
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table td{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.location {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
 }
 
 .close-btn {
     text-align: center;
+    color: rgb(91, 113, 133);
 }
 
 .close-btn span {
@@ -260,7 +342,7 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-    
+
     .form {
         display: flex;
         flex-direction: column;
@@ -290,4 +372,37 @@ input:focus {
         display: none;
     }
 
+    .result-item h2 {
+        font-size: 16px;
+    }
+
+    .result-item h3 {
+        font-size: 14px;
+    }
+
+    .result-item h4 {
+        font-size: 12px;
+    }
+
+    .result-item img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .result-header {
+        flex-direction: column;
+    }
+
+    .result-header img {
+        align-self: flex-start;
+    }
+
+    .result-header div {
+        padding: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
 }
