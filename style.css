@@ -88,7 +88,6 @@ a:hover {
 .content-main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     background-image: url(./img/hospital.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -97,7 +96,7 @@ a:hover {
 }
 
 .search-box {
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
 .search-box button {
@@ -195,6 +194,7 @@ input:focus {
     align-items: center;
     gap: 32px;
     color: rgb(91, 113, 133);
+    margin-top: 32px;
 }
 
 .infos div {
@@ -307,7 +307,7 @@ table {
     width: 60%;
 }
 
-table tr{
+table tr {
     background-color: rgb(250, 250, 250);
 }
 
@@ -315,7 +315,7 @@ table tr:hover {
     background-color: #ddd;
 }
 
-table td{
+table td {
     border-bottom: 1px solid #ddd;
     padding: 8px;
 }

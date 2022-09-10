@@ -231,6 +231,10 @@ function toggleDatalists(value1, value2) {
  */
 function openResult(id) {
     let index = id - 1;
+    let field = document.getElementById('field');
+    let location = document.getElementById('location');
+    field.value = '';
+    location.value = '';
     showResultWrapper();
     showResult(index);
 }
